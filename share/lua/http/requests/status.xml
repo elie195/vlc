@@ -52,6 +52,8 @@ local item = vlc.player.item()
           local metadataContent = vlc.strings.convert_xml_special_chars( httprequests.xmlString(v) )
           print("<info name='"..httprequests.xmlString(k).."'>"..metadataContent.."</info>")
         end
+        local itemUri = vlc.strings.convert_xml_special_chars( httprequests.xmlString(item:uri()) )
+        print("<info name='uri'>"..itemUri.."</info>")
       end
     ?>
     </category>
