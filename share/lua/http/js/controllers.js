@@ -43,7 +43,8 @@ function updateStatus() {
                 });
                 $('#currentSubtitleDelay').append(Math.round($('subtitledelay', data).text() * 100) / 100 + 's');
                 $('#seekSlider').attr('totalLength', $('length', data).text());
-                $('#buttonPlay').attr('state', $('state', data).text()).attr('mrl', $('[name="filename"]', data).text());
+                // $('#buttonPlay').attr('state', $('state', data).text()).attr('mrl', $('[name="filename"]', data).text());
+                $('#buttonPlay').attr('state', $('state', data).text()).attr('mrl', $('[name="uri"]', data).text());
                 if ($('state', data).text() == 'playing') {
                     $('#buttonPlay').removeClass('paused').addClass('playing');
                 } else {
